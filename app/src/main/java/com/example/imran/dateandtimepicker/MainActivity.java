@@ -10,7 +10,6 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import java.text.DateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements
         minute = c.get(Calendar.MINUTE);
 
         TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this, MainActivity.this,
-                hour, minute, false);
+                hour, minute, true);
 
         timePickerDialog.show();
     }
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements
         tv_result.setText("Year: " + yearFinal +"\n"+
         "Month: " + monthFinal +"\n"+
         "Date: " + dayFinal+ "\n"+
+                "hour"+hourFinal+"\n"+
         "minute: " + minuteFinal);
     }
 }
